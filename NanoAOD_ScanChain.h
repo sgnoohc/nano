@@ -3,6 +3,8 @@
 
 #include <algorithm>
 
+#include "TLorentzVector.h"
+
 // RooUtil tool
 #include "rooutil/looper.h"
 #include "rooutil/autohist.h"
