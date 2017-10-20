@@ -20,4 +20,15 @@ The empty looper is tagged at 0.0.1.
 
 # Running batch jobs
 
+Few options are at the top of the following scripts.  
+Samples are turned off all except one DY sample.  
+Feel free to turn additional samples.
+
     python nanometis.py
+
+# Plotting after batch job finishes
+
+First hadd your output that resides somewhere in the hadoop area that you configured in nanometis.py.  
+Hadded file should be called ```output.root``` in order for the following script to recognize.
+
+    python nanoplot.py
