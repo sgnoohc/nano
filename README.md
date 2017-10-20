@@ -19,7 +19,9 @@ To set it up to where you were before type:
 
 # Running locally
 
-    run.sh -c NanoAOD_ScanChain.C output.root Events -1 dummy /hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1/merged_ntuple_1.root
+One example local run of single file from NanoAOD of DY sample.
+
+    run.sh -c NanoAOD_ScanChain.C output.root Events -1 dummy_option_string /hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1/merged_ntuple_1.root
 
 # Plotting after local job finishes
 
