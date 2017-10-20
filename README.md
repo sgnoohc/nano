@@ -12,6 +12,9 @@ The empty looper is tagged at 0.0.1.
 
 # Second time
 
+After you've already installed, and you log off uaf and come back later.  
+To set it up to where you were before type:
+
     source scripts/setup.sh
 
 # Running locally
