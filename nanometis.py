@@ -6,9 +6,9 @@
 
 # NOTE: If you want to resubmit the skimming job, you need to delete $ANALYSIS_BASE/tasks and hadoop_path output path
 
-job_tag = "v1"
+job_tag = "v2"
 hadoop_path = "metis/nano/{}".format(job_tag) # The output goes to /hadoop/cms/store/user/$USER/"hadoop_path"
-nevtperfile = "10000"
+nevtperfile = "-1"
 
 
 
@@ -58,17 +58,17 @@ args = "-c NanoAOD_ScanChain.C output.root Events {} dummy".format(nevtperfile)
 
 dslocs = [
 
-#    ["DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"        , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"]        ,
+    ["DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"        , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"]        ,
     ["DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1"       , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1"]       ,
-#    ["DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v2_MINIAODSIM_NanoAODv1"       , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v2_MINIAODSIM_NanoAODv1"]       ,
-#    ["ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1", "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"],
-#    ["ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"    , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]    ,
-#    ["TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v3_MINIAODSIM_NanoAODv1"                    , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v3_MINIAODSIM_NanoAODv1"]                    ,
-#    ["TT_TuneCUETP8M2T4_13TeV-powheg-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1"                       , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1"]                       ,
-#    ["WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"                 , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"]                 ,
-#    ["WW_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"                                     , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/WW_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]                                     ,
-#    ["WZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"                                     , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/WZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]                                     ,
-#    ["ZZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"                                     , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/ZZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]                                     ,
+    ["DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v2_MINIAODSIM_NanoAODv1"       , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v2_MINIAODSIM_NanoAODv1"]       ,
+    ["ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1", "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"],
+    ["ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"    , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]    ,
+    ["TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v3_MINIAODSIM_NanoAODv1"                    , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v3_MINIAODSIM_NanoAODv1"]                    ,
+    ["TT_TuneCUETP8M2T4_13TeV-powheg-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1"                       , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10_ext1-v1_MINIAODSIM_NanoAODv1"]                       ,
+    ["WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"                 , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1_MINIAODSIM_NanoAODv1"]                 ,
+    ["WW_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"                                     , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/WW_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]                                     ,
+    ["WZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"                                     , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/WZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]                                     ,
+    ["ZZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"                                     , "/hadoop/cms/store/user/namin/NanoAODv1/ProjectMetis/ZZ_TuneCUETP8M1_13TeV-pythia8_RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v2_MINIAODSIM_NanoAODv1"]                                     ,
 
 ]
 
