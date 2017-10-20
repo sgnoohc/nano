@@ -5,6 +5,7 @@
     git clone git@github.com:sgnoohc/nano
     cd nano
     source scripts/setup.sh
+    compile.sh
 
 # Second time
 
