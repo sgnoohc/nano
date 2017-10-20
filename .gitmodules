@@ -1,0 +1,9 @@
+[submodule "ProjectMetis"]
+	path = ProjectMetis
+	url = git@github.com:sgnoohc/ProjectMetis.git
+[submodule "scripts"]
+	path = scripts
+	url = git@github.com:sgnoohc/scripts.git
+[submodule "NanoCORE"]
+	path = NanoCORE
+	url = git@github.com:sgnoohc/NanoCORE.git
