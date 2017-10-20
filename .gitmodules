@@ -7,3 +7,9 @@
 [submodule "NanoCORE"]
 	path = NanoCORE
 	url = git@github.com:sgnoohc/NanoCORE.git
+[submodule "rooutil"]
+	path = rooutil
+	url = git@github.com:sgnoohc/rooutil.git
+[submodule "plottery"]
+	path = plottery
+	url = git@github.com:aminnj/plottery.git
