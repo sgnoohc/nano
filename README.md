@@ -5,7 +5,7 @@ The empty looper is tagged at 0.0.1.
 
 # First time installing
 
-    git clone git@github.com:sgnoohc/nano
+    git clone --recursive -j8 git@github.com:sgnoohc/nano
     cd nano
     source scripts/setup.sh
     compile.sh
